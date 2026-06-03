@@ -1,66 +1,70 @@
-<!-- Abdughafur Khujzoda
-  Copyright (c) 2026 Abdughafur Khujzoda. All rights reserved. -->
 <!doctype html>
-<html lang="tg">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>148</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <img src="assets/images/1.jpg" class="slide active" />
-      <img src="assets/images/2.jpg" class="slide" />
-      <img src="assets/images/3.jpg" class="slide" />
-      <img src="assets/images/4.jpg" class="slide" />
-      <img src="assets/images/5.jpg" class="slide" />
-      <img src="assets/images/6.jpg" class="slide" />
-      <img src="assets/images/7.jpg" class="slide" />
-      <img src="assets/images/8.jpg" class="slide" />
-      <img src="assets/images/9.jpg" class="slide" />
-      <img src="assets/images/10.jpg" class="slide" />
-      <img src="assets/images/11.jpg" class="slide" />
-      <img src="assets/images/12.jpg" class="slide" />
-      <img src="assets/images/13.jpg" class="slide" />
-      <img src="assets/images/14.jpg" class="slide" />
-      <img src="assets/images/15.jpg" class="slide" />
+<html lang="en">
 
-      <div class="controls">
-        <button class="btn" id="pauseBtn">
-          <svg id="pauseIcon" viewBox="0 0 24 24">
-            <rect x="6" y="5" width="4" height="14" />
-            <rect x="14" y="5" width="4" height="14" />
-          </svg>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Садриддин Айнӣ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-        <button class="btn" id="aboutBtn">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <rect x="11" y="10" width="2" height="6" />
-            <rect x="11" y="7" width="2" height="2" />
-          </svg>
-        </button>
-      </div>
+<body>
 
-      <div class="about" id="aboutModal">
-        <div class="about-box">
-          <h2>Created by Abdughafur</h2>
+  <div class="app">
+    <div id="slides"></div>
+    <div class="topbar" id="dots"></div>
+    <div class="controls">
 
-          <button class="btn close-btn" id="closeAbout">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M6 6L18 18M18 6L6 18"
-                stroke="#007aff"
-                stroke-width="2"
-                fill="none"
-              />
-            </svg>
-          </button>
-        </div>
+      <button class="btn" onclick="prev()">
+        <svg viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      <button class="btn" onclick="togglePlay()">
+        <svg id="playIcon" viewBox="0 0 24 24">
+          <rect x="6" y="5" width="4" height="14" fill="#4da3ff" />
+          <rect x="14" y="5" width="4" height="14" fill="#4da3ff" />
+        </svg>
+      </button>
+
+      <button class="btn" onclick="next()">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+
+      <button class="btn" onclick="openInfo()">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="10" x2="12" y2="16" />
+          <circle cx="12" cy="7" r="1" />
+        </svg>
+      </button>
+
+      <button class="btn" onclick="toggleFullscreen()">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+        </svg>
+      </button>
+
+    </div>
+
+    <div class="infoScreen" id="infoScreen">
+      <div class="infoBox">
+        <h1>Дар бораи барнома</h1>
+        <p>Ин барнома ба муносибати 148-солагии Садриддин Айнӣ таҳия шудааст ва нақшаи баргузории ҷамъомади МТМУ-рақами
+          38-ро дар бар мегирад. Маълумотҳо аз ҷониби омӯзгори МТМУ-рақами 38, Маҳмудов С. ҷаъоварӣ шудаанд.<br>Созандаи барнома: Абдуғафур Хуҷзода</p>
+        <button onclick="closeInfo()">Бастан</button>
       </div>
     </div>
 
-    <script src="assets/js/app.js"></script>
-  </body>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+
+</body>
+
 </html>
+
+<!--Copyright 2026 Abdughafur Khujzoda-->
